@@ -3,8 +3,15 @@ co-op project for 3D object rendering
 test commit
 
 # Setup
-1. For Ubuntu: set up with sudo aptget
+1. 
+- For Ubuntu: set up with sudo aptget
 > sudo apt-get install libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev libglew-dev
+
+- For MaxOS: set up with brew
+> brew install glfw glew
+
+Note: `glfw` is for window management and `glew` modern OpenGL functions
+
 2. Check g++ version with `g++ --version`
 
 ```bash
@@ -22,3 +29,21 @@ g+++ main.cpp -o /bin/main
 ```
 
 4. Run your executable in your cli: `./main`
+
+# Compile and print Hello World with header files (.h)
+1. `g++ main.cpp -o bin/main -lGLEW -lglfw -framework OpenGL`
+2. `./bin/main`
+
+ORDER MATTERS!
+
+```c++
+#include <GL/glew.h> // GLEW header must be included first
+#include <GLFW/glfw3.h> // GLFW header comes after GLEW
+#include <iostream>
+
+int main() {
+    std::string name = "World";
+    std::cout << "Hello, " << name << "!" << '\n';
+    return 0;
+}
+```

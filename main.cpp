@@ -1,3 +1,5 @@
+#include <GL/glew.h> // GLEW header must be included first
+#include <GLFW/glfw3.h> // GLFW header comes after GLEW
 #include <iostream>
 
 int main() {
