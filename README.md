@@ -47,3 +47,10 @@ int main() {
     return 0;
 }
 ```
+
+3. Rewrite main():
+- Initlize GLFW: Graphics Library Framework
+```c++
+
+
+```
