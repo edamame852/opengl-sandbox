@@ -32,7 +32,7 @@ g+++ main.cpp -o /bin/main
 
 # Compile and print Hello World with header files (.h)
 1. `g++ main.cpp -o bin/main -lGLEW -lglfw -framework OpenGL`
-2. `./bin/main`
+2. `./bin/main` to run the executable
 
 ORDER MATTERS!
 
