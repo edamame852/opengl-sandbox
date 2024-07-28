@@ -1,50 +1,23 @@
-#include <GL/glew.h> // GLEW header must be included first
-#include <GLFW/glfw3.h> // GLFW header comes after GLEW
+#include <GL/glew.h>
+#include "glfw_init/glfw_init.h" // Include the header for GLFW initialization
 #include <iostream>
 
 int main() {
-    // Printing Hello World
-    std::string name = "World";
-    std::cout << "Hello, " << name << "!" << '\n';
-
-    // Initialize GLFW:
-    if(!glfwInit()) {
-        std::cerr << "Failed to initialize GLFW!" << '\n';
-        return 1;
+    // Initialize GLFW and create a window
+    GLFWwindow* window = initializeGLFW();
+    if (!window) {
+        return 1; // If window creation failed, exit
     }
 
-    // Create a windowed mode window and its OpenGL context:
-    GLFWwindow* window = glfwCreateWindow(640, 480, "Hello World", NULL, NULL);
-    if(!window) {
-        std::cerr << "Failed to create window!" << '\n';
-        glfwTerminate();
-        return 1;
-    }
-
-    // Make the window's context current:
-    glfwMakeContextCurrent(window);
-
-    // Initialize GLEW:
+    // Initialize GLEW
     glewExperimental = GL_TRUE; // Needed for core profile
-    if(glewInit() != GLEW_OK) {
+    if (glewInit() != GLEW_OK) {
         std::cerr << "Failed to initialize GLEW!" << '\n';
-        glfwTerminate();
         return 1;
-    }   
+    }
 
-    // Loop until the user closes the window:
-    while(!glfwWindowShouldClose(window)) {
-        // Render here:
-        glClear(GL_COLOR_BUFFER_BIT);
+    // Main loop and other logic...
 
-        // Swap front and back buffers:
-        glfwSwapBuffers(window);
-
-        // Poll for and process events:
-        glfwPollEvents();
-    }   
-
-    // Close the window:   
-    glfwTerminate();
+    glfwTerminate(); // Clean up and close the window
     return 0;
 }
