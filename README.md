@@ -7,7 +7,10 @@ test commit
 > sudo apt-get install libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev libglew-dev
 
 - For MaxOS: set up with brew
-> brew install glfw glew
+```bash
+brew install glfw glew
+```
+
 
 Note: `glfw` is for window management and `glew` modern OpenGL functions
 
