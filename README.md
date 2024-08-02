@@ -6,6 +6,7 @@ co-op project for 3D object rendering for mechnics
 > sudo apt-get install libglfw3-dev libgl1-mesa-dev libglu1-mesa-dev freeglut3-dev libglew-dev
 
 - For MaxOS: set up with brew
+
 ```bash
 brew install glfw glew
 ```
