@@ -11,7 +11,6 @@ co-op project for 3D object rendering for mechnics
 brew install glfw glew
 ```
 
-
 Note: `glfw` is for window management and `glew` modern OpenGL functions
 
 2. Check g++ version with `g++ --version`
