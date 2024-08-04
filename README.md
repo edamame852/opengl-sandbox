@@ -1,5 +1,5 @@
 # opengl-sandbox
-co-op project for 3D object rendering for mechnics
+co-op project for 3D object rendering for physics and mechnical simulations
 
 # Setup
 1. For Ubuntu: set up with sudo aptget
